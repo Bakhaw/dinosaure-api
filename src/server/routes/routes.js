@@ -14,6 +14,16 @@ Dino.find((err, dinos) => {
 })
 })
 
+// Get par Id
+router.get('/:id', (req, res) => {
+  Dino.findById(req.params.id, (err, dino) => {
+    if (err) {
+      res.send(err)
+    }
+    res.json(dino)
+  })
+})
+
 // Post
 router.post('/add', bodyParser.urlencoded({extended: true}), (req, res) => {
   const newDino = new Dino(req.body);
@@ -41,7 +51,7 @@ router.get('/:id/delete', (req, res) => {
     if (err) {
       res.send(err);
     }
-    res.json({'Success': `${deleted.name} has been deleted`})
+    res.redirect('http://localhost:3000');
   })
 })
 

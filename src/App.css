@@ -1,8 +1,13 @@
 body {
   background-image: url('jurassic-background.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
   color: white;
   font-size: 16px;
+}
+img {
+  width: 150px;
+  height: 150px;
 }
 
 div {
@@ -25,6 +30,9 @@ input {
   padding: 10px;
   margin: 5px;
   border: 2px solid black;
+}
+#file {
+  border: none;
 }
 button {
   padding: 10px 15px;
