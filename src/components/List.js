@@ -8,10 +8,10 @@ export class List extends Component {
 
       <ul>
         {this.props.displayDinos.map((dino, index) =>
-          <div>
-            <li key={index}>{dino.name}</li>
-            <li key={index}>{dino.size}</li>
-            <li key={index}>{dino.food}</li>
+          <div className="list">
+            <li id="text" key={index}>{dino.name}</li>
+            <li id="text" key={index}>{dino.size}</li>
+            <li id="text" key={index}>{dino.food}</li>
             <li>
               <form action={`http://localhost:3005/${dino._id}/edit`} method="POST">
                 <button>Edit</button>
