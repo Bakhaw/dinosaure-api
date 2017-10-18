@@ -6,25 +6,21 @@ body {
   font-size: 16px;
 }
 img {
-  width: 150px;
-  height: 150px;
+  width: 90px;
+  height: 90px;
 }
-
-div {
-  margin: 20px;
-  display: inline-block;
-  text-align: center;
-}
-
 ul {
   list-style-type: none;
+  display: flex;
 }
 .list {
   border: 2px solid white;
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
-  width: 100%;
+  width: 90%;
+  margin: auto;
+  align-items: center;
 }
 
 li {

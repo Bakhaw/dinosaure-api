@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
 import request from 'request';
-import {List} from './components/List'; // en curly brackets car export et functionnal component
 import Formulaire from './components/Formulaire';
+import List from './components/List'; // en curly brackets car export et functionnal component
+import Button from './components/Button';
 
 class App extends Component {
   constructor(props) {
@@ -19,13 +20,18 @@ class App extends Component {
         console.log(error)
       }
       console.log(body);
-      this.setState({dinos: JSON.parse(body)});
+      if (body) {
+        this.setState({
+          dinos: JSON.parse(body)
+        });
+
+      }
     });
   }
   render() {
     return (
       <div className="App">
-        <h2>Dino API</h2>
+        <h2>Dinosaurum</h2>
         <h1>Ajoutez votre dino</h1>
         <Formulaire/>
         <div className="dinos">
