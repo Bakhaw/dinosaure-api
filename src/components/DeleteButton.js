@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class Button extends Component {
+class DeleteButton extends Component {
 
   render() {
     return (
       <div className="deleteButton">
         <form action={`http://localhost:3005/${this.props.id}/delete`} method="POST">
-          <button type="submit">Supprimer</button>
+          <button className="btn btn-danger" type="submit">Supprimer</button>
         </form>
       </div>
     );
@@ -14,4 +14,4 @@ class Button extends Component {
 
 }
 
-export default Button;
+export default DeleteButton;

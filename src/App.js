@@ -3,7 +3,9 @@ import './App.css';
 import request from 'request';
 import Formulaire from './components/Formulaire';
 import List from './components/List'; // en curly brackets car export et functionnal component
-import Button from './components/Button';
+import DeleteButton from './components/DeleteButton';
+import EditButton from './components/EditButton';
+
 
 class App extends Component {
   constructor(props) {
@@ -31,7 +33,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>Dinosaurum</h2>
+        <h1>Dinosaurum</h1>
         <h1>Ajoutez votre dino</h1>
         <Formulaire/>
         <div className="dinos">

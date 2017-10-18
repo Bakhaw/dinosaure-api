@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Button from './Button';
+import DeleteButton from './DeleteButton';
+import EditButton from './EditButton';
 
 
 class List extends Component {
@@ -9,12 +10,15 @@ class List extends Component {
       <div className="list">
         <ul>
           {this.props.displayDinos.map((dino, index) =>
-            <li key={index}>
+            <li className="col-md-6 listItems text-center" key={index}>
               <img src={dino.image} /><br/>
-              {dino.name}<br/>
-              {dino.size}<br/>
-              {dino.food}<br/>
-              <Button id={dino._id}/>
+              Nom: {dino.name}<br/>
+              Taille: {dino.size}<br/>
+              Régime alimentaire: {dino.food}<br/>
+              <div className="buttons">
+                <EditButton id={dino._id} />
+                <DeleteButton id={dino._id}/>
+              </div>
             </li>
           )}
         </ul>

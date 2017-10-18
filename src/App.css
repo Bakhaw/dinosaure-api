@@ -1,46 +1,55 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 body {
-  background-image: url('jurassic-background.jpg');
+  background-image: linear-gradient(rgb(0,0,0) 0%, rgba(236, 213, 213, 0.3) 0%), url('jurassic-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
-  font-size: 16px;
+  color: black;
 }
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 29px;
+  text-align: center;
+}
+
 img {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
 }
-ul {
+
+.listItems {
   list-style-type: none;
+  padding: 5px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
 }
-.list {
-  border: 2px solid white;
+.form-group {
   display: flex;
-  align-items: baseline;
-  justify-content: flex-end;
-  width: 90%;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
   margin: auto;
+}
+
+.form-group * {
+  margin: 5px;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-
-li {
-  padding: 10px;
+.buttons * {
+  padding: 5px;
 }
-
-input {
-  padding: 10px;
-  margin: 5px;
-  border: 2px solid black;
-}
-#file {
-  border: none;
-}
-button {
-  padding: 10px 15px;
-  background-color: white;
-  border: 2px solid black;
-}
-button:hover {
-  background-color: black;
-  color: white;
+.btn-danger,
+.btn-primary {
+  background-color: #d50274;
+  border: 2px solid #d50274;
+  width: 100px;
 }
